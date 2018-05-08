@@ -1,27 +1,39 @@
-# SampleApp1
+# PWA sample (sampleapp1)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+This project is a working sample for PWA application using Angular Service Worker and was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
-## Development server
+## How to run it 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This needs to run as a client and api which api is responsible to provide push notification using web-push library. 
 
-## Code scaffolding
+As the Service Worker in Angular can only work in production mode, there is a need for a development http server which can be installed using:
+```
+npm i -g http-server
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Or using yarn
+```
+yarn add global http-server
+```
 
-## Build
+The **http-server** is used to serve the client app. To run the server and client run the following commands 
+```
+npm run server
+npm run start:prod
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Or using yarn
+```
+yarn server
+yarn start:prod
+```
 
-## Running unit tests
+Now with browsing to http://127.0.01:8080 you will have access to PWA application.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Application Update
+After the first browsing, if anything changes in the client application, with the first reload a dialog will appear that indicate the new version available.
 
-## Running end-to-end tests
+### Push notification
+There are two buttons in home screen which the first one is for subscription to push notification and with the second one it send a short message to the server which then bing send as notification to the client.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
