@@ -30,4 +30,10 @@ yarn start:prod
 
 Now with browsing to http://127.0.01:8080 you will have access to PWA application.
 
+### Application Update
+After the first browsing, if anything changes in the client application, with the first reload a dialog will appear that indicate the new version available.
+
+### Push notification
+There are two buttons in home screen which the first one is for subscription to push notification and with the second one it send a short message to the server which then bing send as notification to the client.
+
 
